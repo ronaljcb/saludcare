@@ -4,6 +4,10 @@ Plataforma de gestión médica con pacientes, médicos, exámenes y resúmenes.
 
 **Edición de portafolio de Ronal Condor · proyecto académico colaborativo.**
 
+**Mi participación:** diseño y desarrollo frontend con Next.js y TypeScript para los módulos de pacientes, médicos, resúmenes e historial de exámenes.
+
+[Proyecto original](https://github.com/DarKNeSsJuaN25/proyecto) · [Mis commits originales](https://github.com/DarKNeSsJuaN25/proyecto/commits/master/?author=ronaljcb) · [Mi participación y arquitectura](docs/CONTRIBUTIONS.md)
+
 [![Demo en Vercel](https://img.shields.io/badge/demo-Vercel-black?logo=vercel)](https://saludcare-three.vercel.app) ![Estado](https://img.shields.io/badge/estado-demo_interactiva-2d7c53)
 
 ![Vista de la aplicación](docs/screenshots/app.png)
