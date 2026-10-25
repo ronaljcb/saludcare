@@ -1,0 +1,10 @@
+{
+  "name": "saludcare-showcase",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix Frontend run build",
+    "dev": "npm --prefix Frontend run dev",
+    "postinstall": "npm --prefix Frontend ci"
+  }
+}

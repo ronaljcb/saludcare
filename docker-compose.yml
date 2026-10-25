@@ -1,0 +1,39 @@
+services:
+  pacientes-api:
+    build: ./pacientes
+    ports:
+      - "5000:5000"
+    env_file:
+      - pacientes/.env
+
+  consultas-medicas-api:
+    build: ./consultas-medicas
+    ports:
+      - "3000:3000"
+    env_file:
+      - consultas-medicas/.env
+
+  labexamns-api:
+    build:
+      context: ./Microservicio3-main
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://172.31.23.127:27017/lab_exams_db
+
+  orquestador:
+    build:
+      context: ./orquestador
+    container_name: orquestador
+    ports:
+      - "5002:5002"
+    environment:
+      - PACIENTES_API_URL=http://pacientes-api:5000
+      - CONSULTAS_API_URL=http://consultas-medicas-api:3000
+    depends_on:
+      - pacientes-api
+      - consultas-medicas-api
+networks:
+  default:
+    name: microservicios-net
+    external: true
